@@ -1,46 +1,68 @@
 .container {
-    display: flex;
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-    padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
 }
 
 .input {
-    padding:15px;
-    width: 80%; 
-    margin: auto;
-    border: 1px solid lightgray;
-    border-radius: 6px; 
-    font-size: 16px; 
+  padding: 15px;
+  width: 80%;
+  margin: auto;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  font-size: 16px;
 }
 
-.input:focus { 
-    outline: none;
+.input:focus {
+  outline: none;
 }
 
 .weather-data {
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items:center;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .city {
-    font-size: 30px;
-    font-weight: 200;
+  font-size: 30px;
+  font-weight: 300;
 
 }
 
 .temp {
-    font-size: 90px;
-    padding: 10px;
-    border: 1px solid lightgray; 
-    border-radius: 12px;
+  font-size: 90px;
+  padding: 20px;
+  border: 1px solid lightgray;
+  border-radius: 12px;
+  margin: 50px;
 }
 
 .weather {
-    font-size: 30px;
-    font-weight: 200;
+  font-size: 30px;
+  font-weight: 300;
 }
 
+body {
+  background-color: lightblue;
+}
+
+p {
+  color: white;
+  
+}
+
+h1 {
+  color: white;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 80px;
+  text-shadow: 2px 2px 5px darkblue;
+
+}
+
+.footnote {
+    display: flex;
+    align-items: flex-end;
+}
