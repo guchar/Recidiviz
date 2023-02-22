@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from "react";
 
 import "./App.css";
+// import { useMemo } from "react";
+// import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api"
+
+// function Home() {
+//     const {} = useLoadScript({googleMapsApiKey: ""})
+// }
+
+
 
 function App() {
   useEffect(() => {
