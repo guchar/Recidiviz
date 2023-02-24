@@ -1,19 +1,13 @@
 import React, { useState, useEffect } from "react";
 import moment from 'moment'
 import "./App.css";
-// import { useMemo } from "react";
-// import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api"
-
-// function Home() {
-//     const {} = useLoadScript({googleMapsApiKey: ""})
-// }
-
 
 
 function App() {
   useEffect(() => {
     document.title = "MarChar's W-App";
   }, []);
+
 
   const apiKey = "afb5899925b1a3f4e22afbaa2c787f76";
 
@@ -33,10 +27,6 @@ function App() {
     }
   }; 
 
-  // var sunrise = weatherData.sys.sunrise;
-  // const humanTime = new Date(sunrise * 1000).toLocaleString();
-  // var sunset = weatherData.sys.sunset;
-  // const humanTime2 = new Date(sunset * 1000).toLocaleString();
 
 
   return (
@@ -86,9 +76,21 @@ function App() {
                   Math.round(weatherData.wind.speed) +
                   " mph"}{" "}
               </p>
-              {/* <p className = "sunset"> {"Sunrise : " + Math.round(weatherData.sys.sunrise)} </p>  */}
-              {/* <p className = "sunrise"> {"Sunrise : " + humanTime} </p> */}
-              {/* /* <p className = "sunset"> {"Sunset : " + humanTime2} </p> */}
+              <p className="sunrise">
+                {" "}
+                {"Sunrise : " +
+                  new Date(
+                    weatherData.sys.sunrise * 1000
+                  ).toLocaleString()}{" "}
+              </p>
+              <p className="sunset">
+                {" "}
+                {"Sunset : " +
+                  new Date(
+                    weatherData.sys.sunset * 1000
+                  ).toLocaleString()}{" "}
+              </p>
+
             </span>
             <p className="city">{weatherData.name}</p>
 
@@ -104,15 +106,7 @@ function App() {
       )}
     </div>
   );
+
 }
 
-  // var sunrise = weatherData.sys.sunrise;
-  // const humanTime = new Date(sunrise * 1000).toLocaleString();
-  // var sunset = weatherData.sys.sunset;
-  // const humanTime2 = new Date(sunset * 1000).toLocaleString();
 export default App;
-
-
-// var t = new Date();
-// t.setSeconds(1370001284);
-// var formatted = moment(t).format("dd.mm.yyyy hh:MM:ss");
