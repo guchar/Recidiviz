@@ -59,10 +59,39 @@ function App() {
           </p>
         </div>
       ) : (
-        <div className = "all-weather"> 
+        <div className="all-weather">
           <div className="weather-data">
-            <p className="city">{weatherData.name}</p> 
-          
+            <span className="other-weather-data">
+              <p className="max spacing">
+                {" "}
+                {"Max: " + Math.round(weatherData.main.temp_max)}{" "}
+              </p>
+              <p className="max spacing">
+                {" "}
+                {"Min: " + Math.round(weatherData.main.temp_min)}{" "}
+              </p>
+              <p className="feels_like spacing">
+                {" "}
+                {"Feels like: " + Math.round(weatherData.main.feels_like)}{" "}
+              </p>
+              <p className="humidity spacing">
+                {" "}
+                {"Humidity: " +
+                  Math.round(weatherData.main.humidity) +
+                  "%"}{" "}
+              </p>
+              <p className="wind spacing">
+                {" "}
+                {"Wind Speed: " +
+                  Math.round(weatherData.wind.speed) +
+                  " mph"}{" "}
+              </p>
+              {/* <p className = "sunset"> {"Sunrise : " + Math.round(weatherData.sys.sunrise)} </p>  */}
+              {/* <p className = "sunrise"> {"Sunrise : " + humanTime} </p> */}
+              {/* /* <p className = "sunset"> {"Sunset : " + humanTime2} </p> */}
+            </span>
+            <p className="city">{weatherData.name}</p>
+
             <p className="temp">{Math.round(weatherData.main.temp)}°F</p>
             <p className="weather">{weatherData.weather[0].main}</p>
             <p className="footnote">
@@ -71,22 +100,16 @@ function App() {
               Neupane.
             </p>
           </div>
-          <div className="other-weather-data">
-              <p className = "max"> {"Max : " + Math.round(weatherData.main.temp_max)} </p>
-              <p className = "max"> {"Min : " + Math.round(weatherData.main.temp_min)} </p>
-              <p className = "feels_like"> {"Feels like : " + Math.round(weatherData.main.feels_like)} </p>
-              <p className = "humidity"> {"Humidity : " + Math.round(weatherData.main.humidity) + "%"} </p>
-              <p className = "wind"> {"Wind Speed : " + Math.round(weatherData.wind.speed) + " mph"} </p>
-              {/* <p className = "sunset"> {"Sunrise : " + Math.round(weatherData.sys.sunrise)} </p>  */}
-              {/* <p className = "sunrise"> {"Sunrise : " + humanTime} </p> */}
-              {/* /* <p className = "sunset"> {"Sunset : " + humanTime2} </p> */}
-            </div>
         </div>
       )}
     </div>
   );
 }
 
+  // var sunrise = weatherData.sys.sunrise;
+  // const humanTime = new Date(sunrise * 1000).toLocaleString();
+  // var sunset = weatherData.sys.sunset;
+  // const humanTime2 = new Date(sunset * 1000).toLocaleString();
 export default App;
 
 
